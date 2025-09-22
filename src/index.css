@@ -70,30 +70,24 @@
 @layer base{
 
   :root{
-    --background: #f1eded;
+    --background:  0 0% 100%;
     --foreground: #f12424;
-
     --card: #b1110b;
-
     --primary: #db102b;
     --primary-foreground: #FFFFFF;
-
     --border: #0f0104;
   }
 
   .dark{
-    --background: #0D1117;
+    --background: 240 10% 3.9%;
     --foreground: #2b1075;
-
     --card: #160286;
-
     --primary: #11032c;
     --primary-foreground: #160552;
-
     --border: #5107c9;
   }
 
-
+  /*Estilização base */
   * {
     @apply border-border;
   }
