@@ -1,6 +1,7 @@
 import { Sun } from "lucide-react";
 import { Moon } from "lucide-react";
-import { useState, useEffect, use } from "react";
+import { useState, useEffect} from "react";
+import { cn } from "../libra/utils.js";  
 
 export const ThemeToggle = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -8,8 +9,8 @@ export const ThemeToggle = () => {
 
  // Verifica o tema salvo no localStorage
     useEffect(() => { 
-    const savedTheme = localStorage.getItem("theme");   
-    if (savedTheme === "dark") {
+    const storedTheme = localStorage.getItem("theme");   
+    if (storedTheme === "dark") {
       document.documentElement.classList.add("dark");
       setIsDarkMode(true);
     } else {
@@ -18,28 +19,30 @@ export const ThemeToggle = () => {
     }
     }, []);
 
-  // Use useEffect para sincronizar o estado com a classe no DOM
-  useEffect(() => {
-    // Verifica o estado inicial do tema
-    if (document.documentElement.classList.contains("dark")) {
-        setIsDarkMode(true);
-    }
-
-  }, []);
-
   const toggleTheme = () => {
-    // Altera o estado
-    setIsDarkMode(!isDarkMode);
-   localStorage.setItem("theme", isDarkMode ? "light" : "dark");
-
-    // Usa toggle() para adicionar ou remover a classe "dark" de forma simples
-    document.documentElement.classList.toggle("dark");
+   if(isDarkMode) {
+    document.documentElement.classList.remove("dark");
+    localStorage.setItem("theme", "light");
+    setIsDarkMode(false);
+   }else{
+     document.documentElement.classList.add("dark");
+    localStorage.setItem("theme", "dark");
+    setIsDarkMode(true);
+   }
     
  };
 
     //  Retorna o ícone de sol ou lua com base no estado atual
   return (
-    <button onClick={toggleTheme}>
+    <button 
+    onClick={toggleTheme} 
+    className={cn(
+      "fixed max-sm:hidden top5 right-5 z-50 p-2 rounded-full transition-colors duration-300",
+      "focus:outlin-hidden"
+    )}>
+      
+      
+      
       {isDarkMode ? (
         <Sun className="h-6 w-6 text-yellow-300" />
       ) : (
