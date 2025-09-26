@@ -1,6 +1,9 @@
 import { ThemeToggle } from "../components/ThemeToggle.tsx";
 import {StarBackground} from "../components/StarBackground.tsx"
 import { NavBar } from "../components/NavBar.tsx"; 
+import { HeroSection } from "../components/HeroSection.tsx";
+import {  AboutSection } from "../components/AboutSection.tsx";
+import { Skills } from "../components/Skills.tsx";
 
 export const Home = () => {
   return (
@@ -13,7 +16,11 @@ export const Home = () => {
     {/*NavBar */ }
     <NavBar />
     {/* Main */}
-
+    <main>
+      <HeroSection/>
+      <AboutSection/>
+      <Skills/>
+    </main>
     {/* Footer */}
     
 
