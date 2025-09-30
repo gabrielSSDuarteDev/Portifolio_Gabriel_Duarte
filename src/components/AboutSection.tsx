@@ -38,7 +38,7 @@ export const AboutSection = () => {
                     </a>
     
                     <a
-                    href="curriculo-gabriel-soares-de-souza-duarte.pdf"
+                    href="public/Documents/curriculo-gabriel-soares-de-souza-duarte.pdf"
                     className={cn(
                         "px-6 py-2 rounded-full border border-primary text-primary",
                         "hover: bg-primary/10 transition-colors duration-300"

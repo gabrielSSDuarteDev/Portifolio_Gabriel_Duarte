@@ -6,6 +6,7 @@ const skills = [
     {name: "Html5/Css3", level: 70, category: "frontEnd"},
     {name: "PHP", level: 60, category: "frontEnd"},
     {name: "React.js", level: 85, category: "frontEnd"},
+    {name: "Linguagem C", level:70, category:"frontEnd"},
 
 
     //Banco de Dados
@@ -39,7 +40,7 @@ export const Skills  = () => {
                      Minhas <span className="text-primary">Habilidades</span>
                 </h2>
 
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
+        <div className="flex flex-wrap justify-center gap-4 mb-12 ">
           {categories.map((category,key) => 
             <button 
             key={key}
