@@ -8,7 +8,7 @@ function App() {
 
   return (
     <>
-    <Toaster/>
+   <Toaster/>
     <BrowserRouter>
       <Routes>
           <Route path='/' element={<Home/>}/>

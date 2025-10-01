@@ -1,12 +1,66 @@
 import { Linkedin, Mail, Phone, Github, Send,  } from "lucide-react"
 import { RiDiscordFill } from "react-icons/ri";
-import { cn } from "../libra/utils";
+import { cn } from "@/libra/utils";
+import { useState } from "react";
+import emailjs from "@emailjs/browser";
+import { useToast } from "@/hooks/useToast"
+import React from "react";
 
-
+const serviceID = 'service_c4xo4uo';
+const templateID = 'template_wfhjmof';
+const userID = 'o2u3aRMu8QDSs1dzp';
 
 export const ContactSection = () => {
 
- 
+    const {toast} = useToast()
+    const [name, setName] = useState("")
+    const [email, setEmail] = useState("")
+    const [subject, setSubject] = useState("")
+    const [message, setMessage] = useState("")
+
+    const sendEmail = async (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+
+    const form = e.currentTarget
+        
+    
+    const templateParams = {
+        name:name,
+        email:email,
+        subject_email:subject,
+        message:message
+    }
+
+ try{
+     await emailjs.send(
+        serviceID,
+        templateID,
+        templateParams,
+        userID,
+    );
+    toast({
+        title: "Mensagem Enviada com Sucesso!",
+        description: "Obrigado! Recebemos sua mensagem e em breve enviaremos uma resposta.",
+    });
+
+    setName("");
+            setEmail("");
+            setSubject("");
+            setMessage("");
+
+ }  catch(error){
+        console.error("Erro ao enciar o E-mail", error);
+        toast({
+            title: "Erro no Envio",
+            description: "Não foi possível enviar a mensagem. Tente novamente mais tarde.",
+        })
+     }
+}
+
+
+
+
+
 return( 
 < section id="contact" className="py-24 px-4 relative bg-secondary/30">
         <div className="container mx-auto max-w-5xl">
@@ -120,19 +174,20 @@ return(
                 <div className="bg-card p-8 rounded-lg shadow-xs ">
                     <h3 className="text-2xl font-semibold mb-6">Envie um Email</h3>
                     
-                    <form className="space-y-6" >
+                    <form className="space-y-6" onSubmit={sendEmail} >
                         <div>
                             <label 
                             htmlFor="name"
                             className="block text-sm font-medium mb-2"
-                            > Seu nome: 
-
-
+                            > 
+                            Seu nome: 
                             </label>
                             <input 
                             type="text"
                             id="name" 
                             required
+                            onChange={(e) => setName(e.target.value)}
+                            value={name}
                             className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outlind-hidden focus:ring-2 focus:ring-primary"
                             placeholder="Gabriel Soares"/>
                         </div>
@@ -149,6 +204,8 @@ return(
                                 type="email"
                                 id="email" 
                                 required
+                                 onChange={(e) => setEmail(e.target.value)}
+                                value={email}
                                 className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outlind-hidden focus:ring-2 focus:ring-primary"
                                 placeholder="seu.email@gmail.com"/>
                         </div>
@@ -163,8 +220,10 @@ return(
                             </label>
                             <input 
                             type="subject"
-                            id="namsubject" 
+                            id="subject" 
                             required
+                             onChange={(e) => setSubject(e.target.value)}
+                            value={subject}
                             className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outlind-hidden focus:ring-2 focus:ring-primary"
                             placeholder="Gabriel Soares"/>
                         </div>
@@ -181,6 +240,8 @@ return(
                                 id="message" 
                                 name="message"
                                 required
+                                onChange={(e) => setMessage(e.target.value)}
+                                value={message}
                                 className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outlind-hidden focus:ring-2 focus:ring-primary  resize-none"
                                 placeholder="Olá, gostaria de agendar uma reunião sobre..."
                                 />

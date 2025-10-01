@@ -1,0 +1,11 @@
+// tsconfig.json (O arquivo que você precisa)
+{
+  "compilerOptions": {
+    "baseUrl": ".", // A base para caminhos absolutos
+    "paths": {
+      // Mapeia o alias '@/*' para a pasta 'src/*'
+      "@/*": ["./src/*"] 
+    },
+    "jsx": "react-jsx"// ... outras opções de configuração do TypeScript
+  }
+}
