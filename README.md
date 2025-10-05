@@ -1,2 +1,2 @@
 # PortifolioGssD
-My Porfolio developed with react.js, javaScript and tailwind css.
+Portifolio de Apresentação sobre mim,desenvolvido com React.js e Tailwind.css
