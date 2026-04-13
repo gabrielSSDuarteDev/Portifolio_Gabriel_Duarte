@@ -1,26 +1,35 @@
 import { useState } from "react";
 import { cn } from "../libra/utils";
 const skills = [
-    //Front End
-    {name: "JavaScript", level: 95, category: "frontEnd"},
-    {name: "Html5/Css3", level: 70, category: "frontEnd"},
-    {name: "PHP", level: 60, category: "frontEnd"},
-    {name: "React.js", level: 85, category: "frontEnd"},
-    {name: "Linguagem C", level:70, category:"frontEnd"},
+    //Back End
+    {name: "Node.js", level: 60, category: "Back-End"},
+    {name: "Java", level: 80, category: "Back-End"},
+    {name: "Linguagem C", level: 70, category: "Back-End"},
+    {name: "Spring Boot", level: 50, category: "Back-End"},
 
+    // Front End
+    {name: "JavaScript", level: 95, category: "Front-End"},
+    {name: "Html5/Css3", level: 70, category: "Front-End"},
+    {name: "PHP", level: 60, category: "Front-End"},
+    {name: "React.js", level: 85, category: "Front-End"},
+    {name: "TypeScript", level: 70, category: "Front-End"},
 
+    
     //Banco de Dados
-
-    {name: "Mysql BD", level: 89, category:"dataBase"},
-    {name: "Power Bi", level: 45, category: "database"},
-    {name: "Excel", level: 80, category:"dataBase"},
+    {name: "PostgreSQL", level: 65, category: "DataBase"},
+    {name: "MongoDB", level: 80, category: "DataBase"},
+    {name: "Mysql BD", level: 89, category:"DataBase"},
+    {name: "Power Bi", level: 45, category: "DataBase"},
+    {name: "Excel", level: 80, category:"DataBase"},
 
 
     //Ferramentas
-     {name:"VScode", level: 95, category:"tools"},
-     {name:"Git/GitHub", level: 80, category: "tools"}
+     {name:"VScode", level: 95, category:"Ferramentas"},
+     {name:"Git/GitHub", level: 80, category: "Ferramentas"},
+     {name: "Intellij", level: 70, category: "Ferramentas"},
+     {name: "Hardware", level: 75, category: "Ferramentas"},
 ]
-const categories = ["all","frontEnd","dataBase","tools"];
+const categories = ["all","Back-End","Front-End","DataBase","Ferramentas"];
 
 
 export const Skills  = () => {

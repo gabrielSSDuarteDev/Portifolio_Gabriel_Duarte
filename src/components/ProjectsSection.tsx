@@ -5,11 +5,11 @@ const projects = [
         {
             id: 1,
             title:"Eccomerce HomePage",
-            description: "A beatiful landing page app using javascript and css",
+            description: "Interface de e-commerce moderna com foco em UX, utilizando JavaScript Vanilla para manipulação dinâmica do DOM, sliders interativos e animações sincronizadas com CSS avançado.",
             imagem: "/projects/porjeto1.png",
             tags: ["JavaScript" , "HTML" , "Css"],
-            demoUrl: "https://www.youtube.com/watch?v=YVkUvmDQ3HY&list=RDYVkUvmDQ3HY&start_radio=1",
-            gitHubUrl: "https://github.com/",
+            demoUrl: "https://gabrielSSDuarteDev.github.io/classic-sport-ecommerce/",
+            gitHubUrl: "https://github.com/gabrielSSDuarteDev/classic-sport-ecommerce",
 
         },
         {

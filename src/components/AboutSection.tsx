@@ -15,35 +15,36 @@ export const AboutSection = () => {
     
                 <div className="space-y-6">
                     <h3 className="text-2xl font-semibold">
-                        Desenvolvedor abaixonado por criações Web e Resolução de Problemas</h3>
+                       Desenvolvedor focado em projetar arquiteturas backend e solucionar desafios lógicos complexos</h3>
     
     
                     <p className="text-muted-foreground">
-                        I`m actully at the college,cursing and persuing my dream of be a developer
-                        i just have complete a year of studies on Information technologys and i looking for a stage ata the moment 
-                        with the goal of improve my abilities and add more skills about my knowlodge
+                        Atualmente, curso Engenharia de Software no Distrito Federal (UDF), 
+                        onde aprofundo meus conhecimentos em arquitetura de sistemas e metodologias ágeis. 
+                        Após consolidar uma base sólida em Tecnologia da Informação, busco minha oportunidade de estágio para 
+                        aplicar essa teoria na resolução de desafios reais e contribuir com o ciclo de desenvolvimento de software.
                     </p>
     
                     <p className="text-muted-foreground">
-                        Im just have falling in love with programming and the logics problems they have 
-                        and create some solutions from those problems has been a very fun activity.
-                        After pass of all the way to get here,im just looking for the next pass, more places to explore in this area.
-    
+                       Encaro cada desafio de programação como uma oportunidade de evoluir minha visão técnica. 
+                       Minha motivação está em entender o funcionamento do software em todas as suas camadas e em como estruturar soluções que unam lógica sólida 
+                       a uma excelente experiência final. Estou pronto para dar o próximo passo na minha carreira, explorando novos contextos e contribuindo com projetos desafiadores.
+
                     </p>
            
     
                 <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
                     <a href="#contact" className="portifolio-buttons">
-                        Clique aqui
+                        Entrar em Contato
                     </a>
     
                     <a
-                    href="public/Documents/curriculo-gabriel-soares-de-souza-duarte.pdf"
+                    href="/Documents/Currículo_GabrielDuarte.pdf"
                     className={cn(
                         "px-6 py-2 rounded-full border border-primary text-primary",
                         "hover: bg-primary/10 transition-colors duration-300"
                     )} 
-                    download="curriculo-gabriel-soares-de-souza-duarte.pdf">
+                    download="Currículo_GabrielDuarte.pdf">
                         Download CV
                     </a>
     
@@ -57,9 +58,9 @@ export const AboutSection = () => {
                                 <Code className="h-6 w-6 text-primary "/>
                             </div>
                             <div className="text-left">
-                                <h4 className="font-semibold text-lg">Web Development</h4>
+                                <h4 className="font-semibold text-lg">Desenvolvimento Full Stack</h4>
                                 <p className="text-muted-foreground ">
-                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                                   Criação de aplicações completas, unindo interfaces intuitivas a estruturas de dados sólidas e escaláveis.
                                 </p>
 
                             </div>
@@ -71,9 +72,9 @@ export const AboutSection = () => {
                                 <User className="h-6 w-6 text-primary "/>
                             </div>
                              <div className="text-left">
-                                <h4 className="font-semibold text-lg">Web Development</h4>
+                                <h4 className="font-semibold text-lg">Engenharia de Software</h4>
                                 <p className="text-muted-foreground ">
-                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                                   Aplicação de padrões de projeto e lógica rigorosa para transformar requisitos complexos em soluções funcionais.
                                 </p>
                             </div>
                         </div>
@@ -84,9 +85,9 @@ export const AboutSection = () => {
                                 <Briefcase className="h-6 w-6 text-primary "/>
                             </div>
                             <div className="text-left">
-                                <h4 className="font-semibold text-lg">Web Development</h4>
+                                <h4 className="font-semibold text-lg">Foco em Resultados</h4>
                                 <p className="text-muted-foreground ">
-                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                                    Comprometido com a entrega de código limpo e a colaboração em metodologias ágeis para impulsionar o sucesso da equipe.
                                 </p>
                             </div>
                         </div>
