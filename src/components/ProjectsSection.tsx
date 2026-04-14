@@ -14,12 +14,12 @@ const projects = [
         },
         {
             id: 2,
-            title:"Eccomerce HomePage",
-            description: "A beatiful landing page app using javascript and css",
+            title:"Sistema de Gerenciador de Usuários",
+            description: "Aplicação Full Stack para controle de registros, com integração em tempo real entre Front-end e Banco de Dados",
             imagem: "/projects/projeto2.png",
-            tags: ["JavaScript" , "HTML" , "Css"],
-            demoUrl: "https://www.youtube.com/watch?v=YVkUvmDQ3HY&list=RDYVkUvmDQ3HY&start_radio=1",
-            gitHubUrl: "https://github.com/",
+            tags: ["React.js" , "Node.js" , "MongoDB"],
+            demoUrl: "https://manager-frontend-tsbm.onrender.com",
+            gitHubUrl: "https://github.com/gabrielSSDuarteDev/FullStack-User-Manager",
 
         },
         {
